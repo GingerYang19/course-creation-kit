@@ -1,0 +1,10 @@
+{
+  "product_replace": [["旧品牌", "新品牌"], ["OldBrand", "NewBrand"]],
+  "fillers": "呃嗯啊唉哦",
+  "corrections": [
+    ["识别出来的错别字A", "正确写法A"],
+    ["识别出来的错别字B", "正确写法B"]
+  ],
+  "term_case": {"agent": "Agent", "skill": "Skill"},
+  "protect": ["新品牌", "关键术语", "得到"]
+}

@@ -1,0 +1,89 @@
+{
+  "_note": "配音音色库模板。通用包只预置公共系统音色（edge-tts / 百炼基础音色）作示例，不含任何复刻音色与试听样本。新增音色：追加到 voices 数组，把试听 mp3 放进 samples/（自建），sample 字段填相对路径。复刻自己的音色：用 bl CLI cosyvoice 音色复刻，复刻后在此登记（provider=cosyvoice，voice_id 填复刻返回的完整音色串，编号建议 C 系）。",
+  "updated": "2026-08-13",
+  "voices": [
+    {
+      "id": "E1",
+      "name": "云健",
+      "gender": "male",
+      "provider": "edge-tts",
+      "voice_id": "zh-CN-YunjianNeural",
+      "params": {
+        "rate": "+0%",
+        "boundary": "WordBoundary"
+      },
+      "chars_per_min": 289,
+      "timbre": "解说腔，沉稳有力（微软公共音色）",
+      "use_for": "节奏偏快、有推进感的旁白段落",
+      "cost": "免费，无额度限制",
+      "word_timestamp": true,
+      "sample": null
+    },
+    {
+      "id": "E4",
+      "name": "云扬",
+      "gender": "male",
+      "provider": "edge-tts",
+      "voice_id": "zh-CN-YunyangNeural",
+      "params": {
+        "rate": "-15%",
+        "boundary": "WordBoundary"
+      },
+      "chars_per_min": 265,
+      "timbre": "专业播报，标准新闻腔（微软公共音色）",
+      "use_for": "需要权威感与清晰度的讲解",
+      "cost": "免费，无额度限制",
+      "word_timestamp": true,
+      "sample": null
+    },
+    {
+      "id": "B01",
+      "name": "longshu",
+      "gender": "male",
+      "provider": "bailian-cosyvoice-v1",
+      "voice_id": "longshu",
+      "params": {
+        "format": "MP3_48000HZ_MONO_256KBPS"
+      },
+      "chars_per_min": null,
+      "timbre": "有声书 / 新闻播报 / 智能客服（百炼基础音色）",
+      "use_for": "需要更自然更有质感的成片配音",
+      "cost": "cosyvoice-v1 免费额度 10000 字符（基础音色共享）",
+      "word_timestamp": false,
+      "sample": null
+    },
+    {
+      "id": "B05",
+      "name": "longjing",
+      "gender": "female",
+      "provider": "bailian-cosyvoice-v1",
+      "voice_id": "longjing",
+      "params": {
+        "format": "MP3_48000HZ_MONO_256KBPS"
+      },
+      "chars_per_min": null,
+      "timbre": "新闻播报 / 导航播报（百炼基础音色）",
+      "use_for": "需要女声的课程或段落",
+      "cost": "cosyvoice-v1 免费额度 10000 字符（基础音色共享）",
+      "word_timestamp": false,
+      "sample": null
+    },
+    {
+      "id": "C1",
+      "name": "（示例占位）你的复刻音色",
+      "gender": "male",
+      "provider": "bailian-cosyvoice",
+      "voice_id": "在此填复刻返回的完整音色串",
+      "params": {
+        "model": "cosyvoice-v2 / v3 / v3.5（与 voice_id 严格配对）"
+      },
+      "chars_per_min": null,
+      "timbre": "讲师本人声音",
+      "use_for": "需要本人出声的对外课程",
+      "cost": "复刻模型按量计费；复刻音色不吐词级时间戳，字幕要另跑 ASR",
+      "word_timestamp": false,
+      "sample": null,
+      "_placeholder": true
+    }
+  ]
+}
